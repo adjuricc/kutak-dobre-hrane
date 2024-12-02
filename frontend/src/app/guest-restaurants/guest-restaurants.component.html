@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <br>
+        <div class="container">
+<div class="filter-container">
+    <label for="filter">Filter by:</label>
+    <select id="filter" [(ngModel)]="filter_option" (change)="apply_filter()">
+      <option value="none">None</option>
+      <option value="name">Name</option>
+      <option value="address">Address</option>
+      <option value="type">Type</option>
+    </select>
+
+</div>
+
+<div class="filter-container">
+    <label for="filter">Order by:</label>
+    <select id="filter" [(ngModel)]="order_option" (change)="apply_order()">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+
+</div>
+
+<button (click)="filter()">Filter</button>
+
+<div class="search-container">
+    <input type="text" placeholder="Search by name" [(ngModel)]="search_input_name">
+    <input type="text" placeholder="Search by address" [(ngModel)]="search_input_address">
+    <input type="text" placeholder="Search by type" [(ngModel)]="search_input_type">
+    
+    <button (click)="on_search()">Search</button>
+</div>
+
+
+
+<div *ngFor="let r of searched_restaurants">
+    <a [routerLink]="['/restaurant', r.name]" routerLinkActive="active"><h1>{{ r.name }} {{ r.address }} {{ r.type }} Average rating: {{ r.avg_rating }}</h1></a>
+    <div class="rating">
+        <div class="stars">
+            <span *ngFor="let star of starsArray; let i = index">
+                <span *ngIf="i < r.avg_rating" class="star full">&#9733;</span>
+                <span *ngIf="i >= r.avg_rating" class="star">&#9733;</span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<p class="err_msg">{{err_msg}}</p>
+
+<table>
+    <th>Restaurant name </th>
+    <th>Restaurant address </th>
+    <th>Restaurant type </th>
+    <th>Waiters </th>
+    <th>Average rating </th>
+    <th>Rating </th>
+    <tr *ngFor="let r of restaurants">
+        <a [routerLink]="['/restaurant', r.name]" routerLinkActive="active"><td>{{r.name}}</td></a>
+        <td>{{r.address}}</td>
+        <td>{{r.type}}</td>
+        <td>
+            <p *ngFor="let w of r.waiters">
+                {{w.name}} {{w.surname}}
+            </p>
+        </td>
+        <td>
+            {{r.avg_rating}}
+        </td>
+        <td>
+            <ng-container>
+                <p-rating [(ngModel)]="r.avg_rating" [readonly]="true" [cancel]="false"></p-rating>
+            </ng-container>
+        </td>
+    </tr>
+</table>
+</div>
+    </body>
+</html>
+
+

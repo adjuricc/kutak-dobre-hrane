@@ -1,0 +1,101 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="flex flex-column gap-2">
+    <label for="username">Username</label>
+    <input 
+        pInputText 
+        id="username" 
+        aria-describedby="username-help" 
+        [(ngModel)]="username" />
+    <small id="username-help">
+        Enter your username to reset your password.
+    </small>
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="password">Password</label>
+    <p-password [(ngModel)]="password" [feedback]="false" />
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="name">Name</label>
+    <input 
+        pInputText 
+        id="name" 
+        aria-describedby="name-help" 
+        [(ngModel)]="name" />
+    <small id="name-help">
+        Enter your username to reset your password.
+    </small>
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="surname">Surname</label>
+    <input 
+        pInputText 
+        id="surname" 
+        aria-describedby="surname-help" 
+        [(ngModel)]="surname" />
+    <small id="surname-help">
+        Enter your username to reset your password.
+    </small>
+</div>
+
+<label>Gender: </label><input type="radio" value="M" name="genderGroup" [(ngModel)]="gender"> M <input type="radio" value="Z" name="genderGroup" [(ngModel)]="gender"> F<br>
+
+
+<div class="flex flex-column gap-2">
+    <label for="address">Address</label>
+    <input 
+        pInputText 
+        id="address" 
+        aria-describedby="address-help" 
+        [(ngModel)]="address" />
+    <small id="address-help">
+        Enter your username to reset your password.
+    </small>
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="phone">Phone</label>
+    <input 
+        pInputText 
+        id="phone" 
+        aria-describedby="phone-help" 
+        [(ngModel)]="phone" />
+    <small id="phone-help">
+        Enter your username to reset your password.
+    </small>
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="email">Email</label>
+    <input 
+        pInputText 
+        id="email" 
+        aria-describedby="email-help" 
+        [(ngModel)]="email" />
+    <small id="email-help">
+        Enter your username to reset your password.
+    </small>
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="credit_number">Credit number</label>
+    <input 
+        pInputText 
+        id="credit_number" 
+        aria-describedby="credit_number-help" 
+        [(ngModel)]="credit_number" />
+    <small id="credit_number-help">
+        Enter your username to reset your password.
+    </small>
+</div>
+
+<p-dropdown 
+    [options]="restaurants" 
+    [(ngModel)]="selected_restaurant" 
+    optionLabel="name" 
+    placeholder="Select a restaurant" />
+
+<button (click)="register()">Add waiter</button>
+{{err_msg}}

@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background: #c9e4f0;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.table-with-shadow {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow to the table */
+}
+
+.caption-with-shadow {
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow to the caption */
+    padding: 10px; /* Adjust padding as needed */
+    background-color: #f0f0f0; /* Optional: Add a background color */
+}

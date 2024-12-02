@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+      <li><a [routerLink]="['/admin', username]" routerLinkActive="active">System</a></li>
+      <li><a routerLink="/guest_requests" routerLinkActive="active">Guest requests</a></li>
+      <li><a routerLink="/add_waiter" routerLinkActive="active">Add waiter</a></li>
+      <li><a routerLink="/add_restaurant" routerLinkActive="active">Add restaurant</a></li>
+      <li (click)="log_out()">Log out</li>
+    </ul>
+</nav>

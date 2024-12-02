@@ -1,0 +1,172 @@
+/* General styling for the entire component */
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+  text-decoration: none; /* Remove underline */
+  color: black; /* Set your custom link color */
+}
+button {
+  background-color: #a6d7ed;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #74cbf2;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  background: #c9e4f0;
+  border-radius: 8px;
+}
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .filter-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-container label {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .filter-container select, .filter-container input {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    padding-top: 100px;
+    margin: 20px auto;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  /* Table header styling */
+  th, td {
+    padding: 12px 15px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  th:last-child {
+    border-right: none;
+  }
+  
+  /* Table row and cell styling */
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  td {
+    border-right: 1px solid #ddd;
+  }
+  
+  td:last-child {
+    border-right: none;
+  }
+  
+  /* Even row styling */
+  tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover effect for rows */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Waiters list styling */
+  td p {
+    margin: 0;
+  }
+  .err-msg {
+    color: #f00;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+  .rating {
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .stars {
+    color: gray;
+  }
+  
+  .star {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .star.full {
+    color: gold;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    table, th, td {
+      display: block;
+      width: 100%;
+    }
+  
+    th {
+      text-align: right;
+    }
+  
+    th:last-child {
+      border-bottom: 1px solid #ddd;
+    }
+  
+    td {
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    td:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+    }
+  
+    tr {
+      margin-bottom: 10px;
+    }
+  }
+  

@@ -1,0 +1,13 @@
+[
+	{
+		"username": "anja",
+		"password": "$2a$12$DfHAuamq.3O7Yvq.n5t7M.BoG6xDslhTeuzsOQS2lQdPmsJJclTce",
+		"name": "Anja",
+		"surname": "Djuric",
+		"gender": "Z",
+		"address": "Pariske Komune 25",
+		"email": "anja@gmail.com",
+		"phone": "+381617656033",
+		"requests": []
+	}
+]

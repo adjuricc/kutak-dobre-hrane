@@ -1,0 +1,28 @@
+<app-waiter-navbar></app-waiter-navbar>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="profile-container">
+            <div class="profile-content">
+                <img [src]="waiter_photo" alt="profile picture">
+                <br>
+                <button (click)="go_to_edit()">Edit profile</button>
+                <h1>{{waiter.username}}</h1>
+                <h1>{{waiter.name}}</h1>
+                <h1>{{waiter.surname}}</h1>
+                <h1>{{waiter.address}}</h1>
+                <h1>{{waiter.phone}}</h1>
+                <h1>{{waiter.email}}</h1>
+                <h1>{{waiter.credit_number}}</h1>
+            </div>
+        </div>
+    </body>
+</html>

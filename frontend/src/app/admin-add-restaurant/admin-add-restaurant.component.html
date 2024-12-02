@@ -1,0 +1,88 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="flex flex-column gap-2">
+    <label for="name">Restaurant name</label>
+    <input 
+        pInputText 
+        id="name" 
+        [(ngModel)]="name" />
+    
+</div>
+<div class="flex flex-column gap-2">
+    <label for="type">Restaurant type</label>
+    <input 
+        pInputText 
+        id="type" 
+        [(ngModel)]="type" />
+    
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="address">Restaurant address</label>
+    <input 
+        pInputText 
+        id="address" 
+        [(ngModel)]="address" />
+    
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="description">Description</label>
+    <input 
+        pInputText 
+        id="description" 
+        [(ngModel)]="description" />
+    
+</div>
+
+<div class="flex flex-column gap-2">
+    <label for="contact_person">Contact person</label>
+    <input 
+        pInputText 
+        id="contact_person" 
+        [(ngModel)]="contact_person" />
+    
+</div>
+
+
+<p-fileUpload 
+    mode="basic" 
+    chooseLabel="Choose an arragement " 
+    chooseIcon="pi pi-upload"
+    name="demo[]" 
+    url="https://www.primefaces.org/cdn/api/upload.php" 
+    accept="application/json" 
+    [maxFileSize]="1000000" 
+    (onUpload)="onUpload($event)" />
+
+<p-fileUpload 
+    mode="basic" 
+    chooseLabel="Choose a menu" 
+    chooseIcon="pi pi-upload"
+    name="demo[]" 
+    url="https://www.primefaces.org/cdn/api/upload.php" 
+    accept="application/json" 
+    [maxFileSize]="1000000" 
+    (onUpload)="onUploadMenu($event)" />
+
+<canvas #myCanvas width="500" height="500"></canvas>
+
+<label for="name">Working hours (HH:mm format): </label>
+<div class="flex flex-column gap-2">
+    <label for="start">Start: </label>
+    <input 
+        pInputText 
+        id="start" 
+        [(ngModel)]="start" />
+    
+</div>
+<div class="flex flex-column gap-2">
+    <label for="end">End: </label>
+    <input 
+        pInputText 
+        id="end" 
+        [(ngModel)]="end" />
+    
+</div>
+
+<button (click)="add_restaurant()">Add restaurant</button>

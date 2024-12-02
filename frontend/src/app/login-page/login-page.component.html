@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <label>Username: </label><input type="text" [(ngModel)]="username">
+            <br>
+            <label>Password: </label><input type="password" [(ngModel)]="password">
+            <br>
+            <button (click)="login()">Login</button>
+            <br>
+            <p class="links" (click)="reg_page()"><i>Don't have an account? Register here.</i></p> <br>
+            <p  class="links" (click)="reset_password_page()">Forgot password? Reset password here.</p>
+            <p class="err-msg">{{err_msg}}</p>
+        </div>
+    </body>
+</html>

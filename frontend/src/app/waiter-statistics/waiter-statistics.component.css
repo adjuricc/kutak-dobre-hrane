@@ -1,0 +1,9 @@
+.chart-container {
+    width: 100%; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+}
+
+.my-chart {
+    width: 100%;
+    height: 100%; /* Use height as needed */
+}

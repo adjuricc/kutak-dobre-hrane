@@ -1,0 +1,254 @@
+[
+	{
+		"idRes": 0,
+		"name": "Pizza bar",
+		"address": "Bulevar Mihajla Pupina 165v",
+		"phone": "0112225467",
+		"type": "Picerija",
+		"avg_rating": 4,
+		"ratings": [
+			{
+				"username": "lola",
+				"rating": 4,
+				"review": "Kul mesto. Dobra pica."
+			}
+		],
+		"waiters": [
+			{
+				"name": "Milan",
+				"surname": "Mihajlovic",
+				"username": "milan"
+			},
+			{
+				"name": "Bojana",
+				"surname": "Djurisic",
+				"username": "bojana"
+			}
+		],
+		"tables": [
+			
+		],
+		"working_hours": {
+			"start": "09:00",
+			"end": "23:00"
+		},
+		"menu":[
+			{
+				"meal_name":"Margherita Pizza"
+			},
+			{
+				"meal_name":"Hawaiian Pizza"
+			}
+		],
+		"description": "Najbolja pica u gradu!",
+		"restaurant_organization": [
+			{
+				"type": "table",
+				"params": {
+					"x": 65,
+					"y": 100,
+					"r": 50
+				},
+			"num": 2
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 190,
+					"y": 100,
+					"r": 50
+				},
+			"num": 2
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 315,
+					"y": 100,
+					"r": 50
+				},
+				"num": 3
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 440,
+					"y": 100,
+					"r": 50
+				},
+			"num": 4
+			},
+
+			{
+				"type": "toilet",
+				"params": {
+					"x": 300,
+					"y": 350,
+					"r": 0
+				},
+				"num": -1
+			},
+			{
+				"type": "kitchen",
+				"params": {
+					"x": 50,
+					"y": 350,
+					"r": 50
+				},
+				"num": -1
+			}
+		]
+	},
+	{
+		"idRes": 1,
+		"name": "Walter",
+		"address": "Magistratski trg 18",
+		"phone": "0631011000",
+		"type": "Domaca kuhinja",
+		"avg_rating": 0,
+		"ratings": [],
+		"waiters": [],
+		"tables": [
+
+		],
+		"working_hours": {
+			"start": "09:00",
+			"end": "23:30"
+		},
+		"menu":[],
+		"description": "",
+		"restaurant_organization": [
+			{
+				"type": "table",
+				"params": {
+					"x": 325,
+					"y": 100,
+					"r": 50
+				},
+				"num": 2
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 450,
+					"y": 100,
+					"r": 50
+				},
+				"num": 2
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 100,
+					"y": 250,
+					"r": 50
+				},
+				"num": 3
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 225,
+					"y": 250,
+					"r": 50
+				},
+				"num": 3
+			},
+			{
+				"type": "toilet",
+				"params": {
+						"x": 300,
+						"y": 350,
+						"r": 0
+				},
+				"num": -1
+			},
+			{
+				"type": "kitchen",
+				"params": {
+					"x": 50,
+					"y": 50,
+					"r": 50
+				},
+				"num": -1
+			}
+		]
+	},
+	{
+		"idRes": 2,
+		"name": "Cica",
+		"address": "Djure Jaksica 11",
+		"phone": "0631311000",
+		"type": "Domaca kuhinja",
+		"avg_rating": 0,
+		"ratings": [],
+		"waiters": [],
+		"tables": [
+			
+		],
+		"working_hours": {
+			"start": "08:00",
+			"end": "23:00"
+		},
+		"menu":[],
+		"description": "",
+		"restaurant_organization": [
+			{
+				"type": "table",
+				"params": {
+					"x": 325,
+					"y": 100,
+					"r": 50
+				},
+				"num": 2
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 450,
+					"y": 100,
+					"r": 50
+				},
+				"num": 2
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 100,
+					"y": 250,
+					"r": 50
+				},
+				"num": 4
+			},
+			{
+				"type": "table",
+				"params": {
+					"x": 225,
+					"y": 250,
+					"r": 50
+				},
+				"num": 6
+			},
+			{
+				"type": "toilet",
+				"params": {
+						"x": 300,
+						"y": 350,
+						"r": 0
+				},
+				"num": -1
+			},
+			{
+				"type": "kitchen",
+				"params": {
+					"x": 50,
+					"y": 50,
+					"r": 50
+				},
+				"num": -1
+			}
+
+
+		]
+	}
+]

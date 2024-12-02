@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+      <li><a [routerLink]="['/guest', user.username]" routerLinkActive="active">Profile</a></li>
+      <li><a routerLink="/restaurants" routerLinkActive="active">Restaurants</a></li>
+      <li><a routerLink="/guest_reservations" routerLinkActive="active">Reservations</a></li>
+      <li><a routerLink="/guest_food_delivery" routerLinkActive="active">Food delivery</a></li>
+      <li (click)="log_out()">Log out</li>
+    </ul>
+</nav>

@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+      <li><a [routerLink]="['/waiter', user.username]" routerLinkActive="active">Profile</a></li>
+      <li><a routerLink="/waiter_reservations" routerLinkActive="active">Reservations</a></li>
+      <li><a routerLink="/waiter_deliveries" routerLinkActive="active">Deliveries</a></li>
+      <li><a routerLink="/waiter_statistics" routerLinkActive="active">Statistics</a></li>
+      <li (click)="log_out()">Log out</li>
+    </ul>
+</nav>

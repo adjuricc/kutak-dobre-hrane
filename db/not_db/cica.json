@@ -1,0 +1,56 @@
+[
+	{
+		"type": "table",
+		"params": {
+			"x": 150,
+			"y": 100,
+			"r": 50
+		},
+		"num": 2
+	},
+	{
+		"type": "table",
+		"params": {
+			"x": 275,
+			"y": 100,
+			"r": 50
+		},
+		"num": 2
+	},
+	{
+		"type": "table",
+		"params": {
+			"x": 350,
+			"y": 250,
+			"r": 50
+		},
+		"num": 4
+	},
+	{
+		"type": "table",
+		"params": {
+			"x": 475,
+			"y": 250,
+			"r": 50
+		},
+		"num": 6
+	},
+	{
+		"type": "toilet",
+		"params": {
+			"x": 300,
+			"y": 350,
+			"r": 0
+		},
+		"num": -1
+	},
+	{
+		"type": "kitchen",
+		"params": {
+			"x": 100,
+			"y": 100,
+			"r": 50
+		},
+		"num": -1
+	}
+]

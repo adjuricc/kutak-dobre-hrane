@@ -1,0 +1,79 @@
+[{
+  "_id": {
+    "$oid": "6689bdd665992a09a5923886"
+  },
+  "username": "lola",
+  "guest_name": "Lola",
+  "guest_surname": "Lolic",
+  "restaurant_name": "Pizza bar",
+  "guests_number": 2,
+  "additional_info": "Ako moze u nepusackom delu restorana",
+  "date": "2024-05-07",
+  "time": "18:30",
+  "dt_of_reservation": "2024-04-07 03:45",
+  "reserved_table": 1,
+  "status": "came",
+  "comment": "",
+  "rating": 4,
+  "review": "Kul mesto. Dobra pica.",
+  "responsible_waiter": "milan"
+},
+{
+  "_id": {
+    "$oid": "6689bdd665992a09a5923887"
+  },
+  "username": "moma",
+  "guest_name": "Momcilo",
+  "guest_surname": "Lolic",
+  "restaurant_name": "Walter",
+  "guests_number": 3,
+  "additional_info": "",
+  "date": "2024-08-07",
+  "time": "12:00",
+  "dt_of_reservation": "2024-04-07 03:47",
+  "reserved_table": 3,
+  "status": "approved",
+  "comment": "",
+  "rating": 0,
+  "review": "",
+  "responsible_waiter": "milan"
+},
+{
+  "_id": {
+    "$oid": "6689bdd665992a09a5923888"
+  },
+  "username": "lola",
+  "guest_name": "Lola",
+  "guest_surname": "Lolic",
+  "restaurant_name": "Pizza bar",
+  "guests_number": 2,
+  "additional_info": "Ako moze u nepusackom delu restorana",
+  "date": "2024-05-07",
+  "time": "18:30",
+  "dt_of_reservation": "2024-01-07 03:45",
+  "reserved_table": 2,
+  "status": "came",
+  "comment": "",
+  "rating": 0,
+  "review": "",
+  "responsible_waiter": ""
+},
+{
+  "_id": {
+    "$oid": "6689bdf65722133507231a4f"
+  },
+  "username": "mara",
+  "guest_name": "Marija",
+  "guest_surname": "Maric",
+  "restaurant_name": "Asia Food",
+  "guests_number": 2,
+  "additional_info": "",
+  "date": "2024-08-07",
+  "time": "20:57",
+  "dt_of_reservation": "2024-06-07 23:58",
+  "reserved_table": 0,
+  "status": "pending",
+  "comment": "",
+  "__v": 0,
+  "responsible_waiter": ""
+}]

@@ -1,0 +1,86 @@
+<app-admin-navbar></app-admin-navbar>
+
+<p-table [value]="guests" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Phone number</th>
+            <th>Email</th>
+            <th>Credit number</th>
+            <th>Update user</th>
+            <th>Deactive user</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-m>
+        <tr>
+            <td>{{m.username}}</td>
+            <td>{{m.name}}</td>
+            <td>{{m.surname}}</td>
+            <td>{{m.gender}}</td>
+            <td>{{m.address}}</td>
+            <td>{{m.phone}}</td>
+            <td>{{m.email}}</td>
+            <td>{{m.credit_number}}</td>
+            <td>
+                <p-button icon="pi pi-user" severity="info" />
+            </td>
+            <td>
+                <p-button icon="pi pi-times" severity="danger"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<br>
+<p-table [value]="waiters" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Phone number</th>
+            <th>Email</th>
+            <th>Credit number</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-m>
+        <tr>
+            <td>{{m.username}}</td>
+            <td>{{m.name}}</td>
+            <td>{{m.surname}}</td>
+            <td>{{m.gender}}</td>
+            <td>{{m.address}}</td>
+            <td>{{m.phone}}</td>
+            <td>{{m.email}}</td>
+            <td>{{m.credit_number}}</td>
+            
+        </tr>
+    </ng-template>
+</p-table>
+{{err_msg}}
+<br>
+<p-table [value]="restaurants" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone number</th>
+            <th>Type</th>
+            <th>Average rating</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-m>
+        <tr>
+            <td>{{m.name}}</td>
+            <td>{{m.address}}</td>
+            <td>{{m.phone}}</td>
+            <td>{{m.type}}</td>
+            <td>{{m.avg_rating}}</td>
+        </tr>
+    </ng-template>
+</p-table>

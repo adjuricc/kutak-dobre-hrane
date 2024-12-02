@@ -1,0 +1,38 @@
+[
+	{
+		"order_id": 0,
+		"username": "lola",
+		"restaurant_name": "Pizza bar",
+		"user_address": "Knez Mihailova 17",
+		"meals": [
+			{
+				"name": "Margherita Pizza",
+				"num": 1
+			}
+		],
+		"order_price": 1700,
+		"order_date": "2024-05-07 16:37",
+		"status": "accepted",
+		"delivery_time": "20-30 minuta"
+	},
+	{
+		"order_id": 1,
+		"username": "petar",
+		"restaurant_name": "Pizza bar",
+		"user_address": "Matije Ivanica 53",
+		"meals": [
+			{
+				"name": "Margherita Pizza",
+				"num": 2
+			},
+			{
+				"name": "Hawaiian Pizza",
+				"num": 1
+			}
+		],
+		"order_price": 5500,
+		"order_date": "2024-07-07 12:17",
+		"status": "accepted",
+		"delivery_time": "40-50 minuta"
+	}
+]

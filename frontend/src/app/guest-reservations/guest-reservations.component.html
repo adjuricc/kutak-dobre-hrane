@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            <br>
+<p-table [value]="archived_reservations" [tableStyle]="{'min-width': '60rem', 'max-width':'200px', 'box-shadow': '0 4px 8px rgba(0,0,0,0.1)'}" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Reservation date</th>
+            <th>Restaurant name</th>
+            <th>Review</th>
+            <th>Rating</th>
+            <th>Rate</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-r>
+        <tr>
+            <td>{{r.dt_of_reservation}}</td>
+            <td>{{r.restaurant_name}}</td>
+            <td>
+                <ng-container *ngIf="r.review; else commentInput">
+                    {{ r.review }}
+                </ng-container>
+                <ng-template #commentInput>
+                    <input type="text" [(ngModel)]="r.new_review" placeholder="Write a comment">
+                </ng-template>
+            </td>
+            <!-- <td>{{r.rating}}</td> -->
+            <td>
+                <ng-container *ngIf="r.rating > 0; else rateSection">
+                    <p-rating [(ngModel)]="r.rating" [readonly]="true" [cancel]="false"></p-rating>
+                </ng-container>
+                <ng-template #rateSection>
+                    <p-rating [(ngModel)]="r.new_rating" [readonly]="false" [cancel]="false"></p-rating>
+                </ng-template>
+            </td>
+            <td>
+                <p-button icon="pi pi-check" (click)="leave_a_review(r.new_rating, r.new_review, r)"  [disabled]="button_active(r.rating, r.review)"/>
+            </td>
+        </tr>
+    </ng-template>
+    
+</p-table>
+
+<br>
+<p-table [value]="active_reservations" [tableStyle]="{'min-width': '60rem', 'max-width':'200px', 'box-shadow': '0 4px 8px rgba(0,0,0,0.1)'}" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Reservation date</th>
+            <th>Date and time</th>
+            <th>Restaurant name</th>
+            <th>Restaurant address</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-r>
+        <tr>
+            <td>{{r.dt_of_reservation}}</td>
+            <td>{{r.date}} {{r.time}}</td>
+            <td>{{r.restaurant_name}}</td>
+            <td>ADRESA</td>
+            <td>
+                <p-button icon="pi pi-times" styleClass="p-button-rounded p-button-text" severity="danger" (click)="cancel_reservation(r)"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+    
+</p-table>
+
+            <p class="err-msg">{{err_msg}}</p>
+        </div>
+    </div>
+    </body>
+</html>
+
+

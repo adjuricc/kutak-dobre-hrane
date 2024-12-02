@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <p-table [value]="cart" [tableStyle]="{'min-width': '60rem'}">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Meal name</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Ingredients</th>
+                        <th>Order</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-m>
+                    <tr>
+                        <td>{{m.name}}</td>
+                        <td><img [src]="m.photo" [alt]="" width="100" class="shadow-4" /></td>
+                        <td>{{m.price | currency:'RSD'}}</td>
+                        <td>
+                            <p *ngFor="let i of m.ingredients">{{i.name}}</p>
+                        </td>
+                        <td>
+                            {{m.num}}
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+            
+        </div>
+    </body>
+</html>

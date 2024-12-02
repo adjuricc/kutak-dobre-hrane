@@ -1,0 +1,16 @@
+<app-admin-navbar></app-admin-navbar>
+<div>
+    <div *ngFor="let request of requests">
+
+        <p-card header="{{request.name}} {{request.surname}}" subheader="{{request.username}}" [style]="{ width: '250px' }">
+            <ng-template pTemplate="footer">
+                <div class="flex gap-3 mt-1">
+                    <p-button label="Approve" severity="secondary" class="w-full" styleClass="w-full" (click)="accept(request)"/>
+                    <p-button label="Disapprove" class="w-full" styleClass="w-full" (click)="deny(request)" />
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+</div>
+
+

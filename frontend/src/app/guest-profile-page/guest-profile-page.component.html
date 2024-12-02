@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="profile-container">
+            <div class="profile-content">
+                <img [src]="guest_photo" alt="profile picture">
+                <br>
+                <button (click)="go_to_edit()">Edit profile</button>
+                <h1>{{guest.username}}</h1>
+                <h1>{{guest.name}} {{guest.surname}}</h1>
+                <h1>{{guest.address}}</h1>
+                <h1>{{guest.phone}}</h1>
+                <h1>{{guest.email}}</h1>
+                <h1>{{guest.credit_number}}</h1>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+<router-outlet></router-outlet>

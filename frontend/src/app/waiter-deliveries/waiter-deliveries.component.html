@@ -1,0 +1,38 @@
+<app-waiter-navbar></app-waiter-navbar>
+<p-table [value]="orders" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Guest username</th>
+            <th>Restaurant name</th>
+            <th>Guest address</th>
+            <th>Ordered meals</th>
+            <th>Status</th>
+            <th>Delivery time</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-m>
+        <tr class="custom-row-height">
+            <td>{{m.username}}</td>
+            <td>{{m.restaurant_name}}</td>
+            <td>{{m.user_address}}</td>
+            <td>
+                <p *ngFor="let o of m.meals">
+                    {{o.name}} {{o.num}}
+                </p>
+            </td>
+            <td>{{m.status}}</td>
+            <td>
+                <p-dropdown 
+                    [options]="options" 
+                    [(ngModel)]="selected_option" 
+                    placeholder="Select" />
+            </td>
+            <td>
+                <p-button icon="pi pi-times"  severity="danger " (click)="disapprove_delivery(m)" />
+            </td>
+            <td>
+                <p-button icon="pi pi-check"  (click)="approve_delivery(m)"/>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

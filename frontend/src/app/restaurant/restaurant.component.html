@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{restaurant.name}}; {{restaurant.address}}; {{restaurant.type}}; {{restaurant.phone}}</h1>
+
+<div class="big-card">
+    <div class="card" *ngFor="let r of ratings">
+        <p>{{r.username}} {{r.review}}</p>
+    </div>
+</div>
+
+<p><i class="fa fa-map-marker"></i> {{ restaurant.address }}</p>
+      <div class="googleMaps">
+        <iframe id="map"
+                [src]="mapUrl" r
+                width="600" 
+                height="400"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+</div>
+
+ <p-calendar [(ngModel)]="date" [showTime]="true" [showSeconds]="false"></p-calendar>
+<label>Number of guests: </label><input type="text" [(ngModel)]="num_of_guests">
+<label>Additional information: </label><textarea [(ngModel)]="additional_info"></textarea>
+<button (click)="make_a_reservation()">Reserve</button>
+
+<p-table [value]="meals" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Meal name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Ingredients</th>
+            <th>Order</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-m>
+        <tr>
+            <td>{{m.name}}</td>
+            <td><img [src]="m.photo" [alt]="" width="100" class="shadow-4" /></td>
+            <td>{{m.price | currency:'RSD'}}</td>
+            <td>
+                <p *ngFor="let i of m.ingredients">{{i.name}}</p>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="m.num"> 
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<button (click)="make_an_order()">Order now</button>
+<p-button icon="pi pi-bookmark" class="custom-button" severity="secondary" (click)="order_list()"></p-button>
+        </div>
+    </body>
+</html>
+
+

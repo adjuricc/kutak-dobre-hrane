@@ -1,0 +1,59 @@
+/* General styling for the entire document */
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh; /* Ensure minimum height of viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background: #c9e4f0;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.canvas-dropdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.canvas-container {
+  width: 500px; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+  background-color: #fff; /* Optional background color for canvas area */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.err-msg {
+  color: #f00;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .canvas-container {
+    width: 100%; /* Make canvas container full width on smaller screens */
+  }
+}

@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="background">
+            <div class="container">
+                <div class="form-wrapper">
+            
+                    <label>Username: </label><input type="text" [(ngModel)]="username"><br>
+                    <label>Password: </label><input type="password" [(ngModel)]="password"><br>
+                    <label>Name: </label><input type="text" [(ngModel)]="name"><br>
+                    <label>Surname: </label><input type="text" [(ngModel)]="surname"><br>
+                    <label>Gender: </label><input type="radio" value="M" name="genderGroup" [(ngModel)]="gender"> M <input type="radio" value="Z" name="genderGroup" [(ngModel)]="gender"> F<br>
+                    <label>Address: </label><input type="text" [(ngModel)]="address"><br>
+                    <label>Phone number: </label><input type="text" [(ngModel)]="phone"><br>
+                    <label>Email: </label><input type="text" [(ngModel)]="email"><br>
+                    <label for="fileInput" class="file-label">Choose Profile Picture</label>
+                    <input type="file" id="fileInput" name="fileInput" accept=".jpg, .jpeg, .png" (change)="on_file_selected($event)">
+                    <label>Credit number: </label><input type="text" [(ngModel)]="credit_number"><br>
+                    
+                    <button (click)="update()">Update </button>
+                    <br>
+            
+                    <p class="err-msg">{{err_msg}}</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
